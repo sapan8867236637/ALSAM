@@ -18,4 +18,3 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("langPopup").style.display = "flex";
   }
 });
-
