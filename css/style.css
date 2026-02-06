@@ -81,6 +81,13 @@ ul li::before {
   border-radius: 5px;
 }
 
+.lang-btn button.active {
+  background: #ffffff;
+  color: #0f7c54;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
 /* WhatsApp */
 .whatsapp-float {
   position: fixed;
