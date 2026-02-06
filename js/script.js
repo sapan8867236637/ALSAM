@@ -1,10 +1,8 @@
 function setLang(lang) {
-  // Set text
   document.querySelectorAll("[data-en]").forEach(el => {
     el.innerText = el.getAttribute("data-" + lang);
   });
 
-  // Highlight active button
   document.querySelectorAll(".lang-btn button").forEach(btn => {
     btn.classList.remove("active");
   });
