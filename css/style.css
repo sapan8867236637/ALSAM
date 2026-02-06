@@ -3,7 +3,6 @@ body {
   font-family: Arial, sans-serif;
   background: #f9fdfb;
   color: #333;
-  scroll-behavior: smooth;
 }
 
 header {
@@ -33,40 +32,37 @@ section {
   padding: 40px 20px;
 }
 
+/* ✅ FIXED TICKS */
 ul {
   list-style: none;
-  padding: 0;
+  padding-left: 0;
+}
+
+ul li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
 }
 
 ul li::before {
-  content: "✔ ";
+  content: "✔";
   color: green;
+  font-weight: bold;
+  margin-right: 10px;
 }
 
-form input, form button {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
+/* QR SECTION */
+.qr-box {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
 }
 
-form button {
-  background: #0f7c54;
-  color: white;
-  border: none;
-}
-
-.note {
-  font-size: 14px;
-  color: #666;
-}
-
-.review-btn {
-  display: inline-block;
-  background: #4285F4;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 5px;
-  text-decoration: none;
+.qr-box img {
+  border: 1px solid #ccc;
+  padding: 5px;
 }
 
 .disclaimer {
@@ -81,7 +77,7 @@ footer {
   padding: 10px;
 }
 
-/* WhatsApp Floating Button */
+/* WhatsApp Floating */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
@@ -93,5 +89,4 @@ footer {
   border-radius: 50%;
   text-decoration: none;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  z-index: 1000;
 }
