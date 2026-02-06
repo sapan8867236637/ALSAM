@@ -1,21 +1,25 @@
 function setLang(lang) {
+  // Set text
   document.querySelectorAll("[data-en]").forEach(el => {
     el.innerText = el.getAttribute("data-" + lang);
   });
 
-  // highlight active button
+  // Highlight active button
   document.querySelectorAll(".lang-btn button").forEach(btn => {
     btn.classList.remove("active");
   });
 
-  document
-    .querySelector(`.lang-btn button[onclick="chooseLang('${lang}')"]`)
-    ?.classList.add("active");
+  const activeBtn = document.querySelector(
+    `.lang-btn button[onclick="chooseLang('${lang}')"]`
+  );
+  if (activeBtn) activeBtn.classList.add("active");
 }
+
 function chooseLang(lang) {
   localStorage.setItem("siteLang", lang);
   setLang(lang);
-  document.getElementById("langPopup").style.display = "none";
+  const popup = document.getElementById("langPopup");
+  if (popup) popup.style.display = "none";
 }
 
 document.addEventListener("DOMContentLoaded", function () {
