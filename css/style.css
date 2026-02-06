@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f9fdfb;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+header {
+  background: #0f7c54;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.lang-btn button {
+  margin: 5px;
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.hero {
+  background: #dff3eb;
+  text-align: center;
+  padding: 40px;
+  font-size: 22px;
+}
+
+section {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li::before {
+  content: "✔ ";
+  color: green;
+}
+
+form input, form button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+form button {
+  background: #0f7c54;
+  color: white;
+  border: none;
+}
+
+.note {
+  font-size: 14px;
+  color: #666;
+}
+
+.review-btn {
+  display: inline-block;
+  background: #4285F4;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.disclaimer {
+  background: #fff3cd;
+  font-size: 14px;
+}
+
+footer {
+  background: #0f7c54;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  font-size: 26px;
+  padding: 15px 18px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
