@@ -4,7 +4,17 @@ function setLang(lang) {
   });
 }
 
-/* ✅ AUTO-LOAD ENGLISH ON PAGE LOAD */
+function chooseLang(lang) {
+  localStorage.setItem("siteLang", lang);
+  setLang(lang);
+  document.getElementById("langPopup").style.display = "none";
+}
+
 document.addEventListener("DOMContentLoaded", function () {
-  setLang("en");
+  const savedLang = localStorage.getItem("siteLang");
+  if (savedLang) {
+    setLang(savedLang);
+  } else {
+    document.getElementById("langPopup").style.display = "flex";
+  }
 });
